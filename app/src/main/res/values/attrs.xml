@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="WaitingBallView">
+        <attr name="ballCount" format="integer"/>
+        <attr name="ballColor" format="color"/>
+        <attr name="ballRadius" format="dimension"/>
+        <attr name="lineColor" format="color"/>
+        <attr name="waveAngle" format="float"/>
+        <attr name="lineWidth" format="dimension"/>
+        <attr name="barColor" format="color"/>
+        <attr name="barWidth" format="dimension"/>
+        <attr name="animationPeriod" format="float"/>
+        <attr name="wavingBallCount" format="integer"/>
+    </declare-styleable>
+</resources>
