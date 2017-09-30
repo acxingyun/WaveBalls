@@ -30,20 +30,44 @@ public class WaitingBallView extends View {
      */
     private float ballRadius;
 
+    /**
+     * 小球颜色
+     */
     private int ballColor;
 
+    /**
+     * 摆线的颜色
+     */
     private int lineColor;
 
+    /**
+     * 水平bar颜色
+     */
     private int barColor;
 
+    /**
+     * 水平bar宽度
+     */
     private float barWidth;
 
+    /**
+     * 摆线宽度
+     */
     private float lineWidth;
 
+    /**
+     * 画摆线画笔
+     */
     private Paint linePaint;
 
+    /**
+     * 画球的画笔
+     */
     private Paint ballPaint;
 
+    /**
+     * 摆动一个周期时长
+     */
     private float animationPeriod;
 
     /**
@@ -56,10 +80,19 @@ public class WaitingBallView extends View {
      */
     private float wavingAngle;
 
+    /**
+     * 摆动小球个数
+     */
     private int wavingBallCount;
 
+    /**
+     * 自定义view的宽度
+     */
     private int mWidth;
 
+    /**
+     * 自定义view的高度
+     */
     private int mHeight;
 
     /**
@@ -152,14 +185,6 @@ public class WaitingBallView extends View {
 
         Log.d(getClass().getSimpleName(), "mWidth:" + mWidth);
         Log.d(getClass().getSimpleName(), "mHeight:" + mHeight);
-
-        //如果小球数量太多无法画完，减小小球半径
-//        lineLength = mHeight - ballRadius;
-//        double maxWidthInAni = ballCount * 2 * ballRadius + lineLength * Math.sin(waveAngleMax * Math.PI / 180) * 2;
-//        if (maxWidthInAni > mWidth){
-//            ballRadius = (float) ((mWidth - lineLength * Math.sin(waveAngleMax * Math.PI / 180) * 2) / (2 * ballCount));
-//        }
-//        lineLength = mHeight - ballRadius;
 
         setMeasuredDimension(mWidth, mHeight);
     }
@@ -271,49 +296,6 @@ public class WaitingBallView extends View {
                 canvas.drawLine( lineStartX, lineStartY, lineStopX, lineStopY, linePaint);
                 canvas.drawCircle( ballX,  ballY, ballRadius, ballPaint);
             }
-
-//            if (ballCount % 2 == 0){
-//                for (int i = wavingBallCount; i< ballCount; i++){
-//
-//                    locationList = locationMap.get(i);
-//                    ballX = (float) (locationList.get(0) + lineLength * Math.sin(wavingAngle * Math.PI/180));
-//                    ballY = (float) (lineLength * Math.cos(wavingAngle * Math.PI / 180));
-//
-//                    lineStartX = locationList.get(0);
-//                    lineStartY = 0;
-//                    lineStopX = ballX;
-//                    lineStopY = ballY;
-//
-//                    canvas.drawLine(lineStartX, lineStartY, lineStopX, lineStopY, linePaint);
-//                    canvas.drawCircle( ballX,  ballY, ballRadius, ballPaint);
-//                }
-//            }else {
-//                locationList = locationMap.get((ballCount - 1) / 2);
-//                ballX = locationList.get(0);
-//                ballY = locationList.get(1);
-//
-//                lineStartX = ballX;
-//                lineStartY = ballY;
-//                lineStopX = ballX;
-//                lineStopY = 0;
-//
-//                canvas.drawLine( lineStartX, lineStartY, lineStopX, lineStopY, linePaint);
-//                canvas.drawCircle( ballX,  ballY, ballRadius, ballPaint);
-//
-//                for (int i = (ballCount + 1)/2; i< ballCount; i++){
-//                    locationList = locationMap.get(i);
-//                    ballX = (float) (locationList.get(0) + lineLength * Math.sin(wavingAngle * Math.PI/180));
-//                    ballY = (float) (lineLength * Math.cos(wavingAngle * Math.PI / 180));
-//
-//                    lineStartX = locationList.get(0);
-//                    lineStartY = 0;
-//                    lineStopX = ballX;
-//                    lineStopY = ballY;
-//
-//                    canvas.drawLine(lineStartX, lineStartY, lineStopX, lineStopY, linePaint);
-//                    canvas.drawCircle( ballX,  ballY, ballRadius, ballPaint);
-//                }
-//            }
         }
     }
 

@@ -6,19 +6,8 @@
     android:layout_height="match_parent"
     tools:context="acxingyun.cetcs.com.myviews.MainActivity">
 
-    <TextView
-        android:id="@+id/tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <acxingyun.cetcs.com.myviews.WaitingBallView
         android:id="@+id/waitingBallView"
-        android:layout_below="@id/tv"
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -31,7 +20,7 @@
         app:barColor="@color/black"
         app:barWidth="5dp"
         app:animationPeriod="5000"
-        app:wavingBallCount="3"
+        app:wavingBallCount="1"
         />
 
 </RelativeLayout>
